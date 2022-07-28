@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="number" id="num1">
+<button type="button" onclick="myFunction1()">Print positive/negative</button>
+<p id="demo1"></p>
+
+<input type="number" id="num2" />
+<input type="button" onclick="printEvenNums()" value="Print Even Numbers" />
+<div id="result"></div>
+<br>
+<input type="number" id="num3" />
+<input type="button" onclick="printoddNums()" value="Print Odd Numbers" />
+<div id="result1"></div>
+
+
+<script>
+function myFunction1() 
+{
+    let x = document.getElementById("num1").value;
+    let text;
+    if (x<0) {
+    text = "Number is negative enter positive number.";
+  } else {
+    text = "Input is valid";
+  }
+  document.getElementById("demo1").innerHTML = text;
+}
+function printEvenNums()
+{
+    var num2 = parseInt(document.getElementById("num2").value);
+    var evenNums = "<br>Even Numbers:<br>";
+    let text;
+    for(i=num2+1; i<=num2+6; i++){
+        if(i % 2 == 0 & i>0 ){
+                         
+            evenNums +=i+ "<br>";
+
+          }
+          else{
+            text="number is invalid";
+          }
+        }
+        document.getElementById("result").innerHTML = evenNums;
+}
+function printoddNums()
+{
+    var num3 = parseInt(document.getElementById("num3").value);
+    var oddNums = "<br>odd Numbers:<br>";
+    let text;
+    for(i=num3+1; i<=num3+6; i++){
+        if(i % 2 != 0 && i>0){
+                          
+            oddNums += i + "<br>";
+
+          }
+          else{
+               text="invalid number";
+          }
+        }
+        document.getElementById("result1").innerHTML = oddNums;
+}
+
+
+</script>
+
+</body>
+</html> 
